@@ -9,6 +9,10 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+.values-container {
+  margin-top: 10px;
+}
+
 .entry,
 .values {
   width: 41%;
@@ -20,15 +24,22 @@
 
 .values {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 16px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: $darkGreen;
+  padding: 10px;
 }
 
-#reset-button {
-  box-shadow: none;
+.reset-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-h2 {
+h2,
+h4 {
   color: #00474b;
 }
 

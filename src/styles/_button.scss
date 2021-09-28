@@ -18,6 +18,8 @@ button {
   &.reset {
     color: $darkGreen;
     background-color: $teal;
+    width: 80%;
+    border-radius: 2px;
   }
 
   font-family: inherit;

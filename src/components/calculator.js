@@ -15,9 +15,13 @@ const Calculator = () => {
         <InputBar id="people-input" label="Number of People" />
       </div>
       <div className="values">
-        <Display label="Tip Amount" />
-        <Display label="Total" />
-        <Button mode="reset" value="RESET" />
+        <div className="values-container">
+          <Display label="Tip Amount" />
+          <Display label="Total" />
+        </div>
+        <div className="reset-button-container">
+          <Button mode="reset" value="RESET" />
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,26 @@
+.display-header {
+  color: white;
+  margin: 0;
+}
+
+.display-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  align-items: center;
+}
+
+.per-person {
+  display: flex;
+  flex-direction: column;
+}
+
+h6 {
+  margin: 0;
+}
+
+.amount-header {
+  font-size: 3rem;
+  margin: 0;
+}

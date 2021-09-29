@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
-const InputBar = ({ label }) => {
+const InputBar = ({ label, mode }) => {
   const [number, setNumber] = useState(0);
 
   return (
     <div>
       <h4>{label}</h4>
       <input
+        className={mode}
         type="text"
         value={number}
         onChange={(e) => setNumber(e.target.value)}

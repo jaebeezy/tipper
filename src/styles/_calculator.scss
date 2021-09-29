@@ -40,7 +40,11 @@
 
 h2,
 h4 {
-  color: #00474b;
+  color: $headerGreen;
+}
+
+h4 {
+  margin-bottom: 10px;
 }
 
 h1,

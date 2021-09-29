@@ -10,9 +10,9 @@ const Calculator = () => {
   return (
     <div className="calculator-container">
       <div className="entry">
-        <InputBar id="bill-input" label="Bill" />
+        <InputBar mode="bill-input" label="Bill" />
         <TipSelector />
-        <InputBar id="people-input" label="Number of People" />
+        <InputBar mode="people-input" label="Number of People" />
       </div>
       <div className="values">
         <div className="values-container">

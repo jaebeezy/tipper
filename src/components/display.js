@@ -1,6 +1,6 @@
 import React from "react";
 
-const Display = ({ label }) => {
+const Display = ({ label, amount, people }) => {
   return (
     <div className="display-container">
       <div className="per-person">
@@ -8,7 +8,7 @@ const Display = ({ label }) => {
         <h6>/ person</h6>
       </div>
       <div>
-        <h1 className="amount-header">$0.00</h1>
+        <h1 className="amount-header">${amount / people}</h1>
       </div>
     </div>
   );

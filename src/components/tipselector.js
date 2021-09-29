@@ -2,20 +2,51 @@ import React from "react";
 
 import Button from "./button";
 
-const TipSelector = () => {
+const TipSelector = ({ bill, setTip }) => {
+  // handler function to calculate tip amount from bill
+  const buttonClickHandler = (e) => {
+    let tipAmount = bill * e.target.value;
+    setTip(tipAmount);
+  };
+
   return (
     <div>
       <h4>Select Tip %</h4>
       <div className="button-container">
         <div className="button-row first-row">
-          <Button mode="primary" value="5%" />
-          <Button mode="primary" value="10%" />
-          <Button mode="primary" value="15%" />
+          <Button
+            mode="primary"
+            name="5%"
+            value={0.05}
+            onClick={(e) => buttonClickHandler(e)}
+          />
+          <Button
+            mode="primary"
+            name="10%"
+            value={0.1}
+            onClick={(e) => buttonClickHandler(e)}
+          />
+          <Button
+            mode="primary"
+            name="15%"
+            value={0.15}
+            onClick={(e) => buttonClickHandler(e)}
+          />
         </div>
         <div className="button-row">
-          <Button mode="primary" value="20%" />
-          <Button mode="primary" value="25%" />
-          <Button mode="secondary" value="Custom" />
+          <Button
+            mode="primary"
+            name="20%"
+            value={0.2}
+            onClick={(e) => buttonClickHandler(e)}
+          />
+          <Button
+            mode="primary"
+            name="25%"
+            value={0.25}
+            onClick={(e) => buttonClickHandler(e)}
+          />
+          <Button mode="secondary" name="Custom" />
         </div>
       </div>
     </div>

@@ -13,6 +13,12 @@ const Calculator = () => {
   const [total, setTotal] = useState(0);
   const [tip, setTip] = useState(0);
 
+  // event handler for reset button
+  const resetButtonHandler = () => {
+    setBill(0);
+    setPeople(1);
+  };
+
   useEffect(() => {
     let newTotal = Number(bill) + Number(tip);
     setTotal(newTotal);
@@ -43,7 +49,7 @@ const Calculator = () => {
           <Display label="Total" amount={total} people={people} />
         </div>
         <div className="reset-button-container">
-          <Button mode="reset" name="RESET" />
+          <Button mode="reset" name="RESET" onClick={resetButtonHandler} />
         </div>
       </div>
     </div>

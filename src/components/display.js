@@ -1,5 +1,7 @@
 import React from "react";
 
+import { round } from "../helpers/round";
+
 const Display = ({ label, amount, people }) => {
   return (
     <div className="display-container">
@@ -8,7 +10,7 @@ const Display = ({ label, amount, people }) => {
         <h6>/ person</h6>
       </div>
       <div>
-        <h1 className="amount-header">${amount / people}</h1>
+        <h1 className="amount-header">${round(amount / people)}</h1>
       </div>
     </div>
   );

@@ -16,6 +16,7 @@ const Calculator = () => {
   // event handler for reset button
   const resetButtonHandler = () => {
     setBill(0);
+    setTip(0);
     setPeople(1);
   };
 

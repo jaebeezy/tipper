@@ -26,6 +26,14 @@ button {
     border-radius: 2px;
   }
 
+  &:disabled {
+    background-color: #021516;
+    box-shadow: none;
+    &:hover {
+      background-color: #021516;
+    }
+  }
+
   font-family: inherit;
   height: 42.5px;
   width: 105px;

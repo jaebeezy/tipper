@@ -15,7 +15,7 @@ const Calculator = () => {
 
   // event handler for reset button
   const resetButtonHandler = () => {
-    setBill(0);
+    setBill("");
     setTip(0);
     setPeople(1);
   };
@@ -61,7 +61,12 @@ const Calculator = () => {
           />
         </div>
         <div className="reset-button-container">
-          <Button mode="reset" name="RESET" onClick={resetButtonHandler} />
+          <Button
+            mode="reset"
+            name="RESET"
+            onClick={resetButtonHandler}
+            disabled={!bill && people === 1 ? true : false}
+          />
         </div>
       </div>
     </div>

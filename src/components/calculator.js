@@ -8,7 +8,7 @@ import Display from "./display";
 
 const Calculator = () => {
   // states to manage for calculator
-  const [bill, setBill] = useState(0);
+  const [bill, setBill] = useState();
   const [people, setPeople] = useState(1);
   const [total, setTotal] = useState(0);
   const [tip, setTip] = useState(0);
@@ -20,6 +20,7 @@ const Calculator = () => {
     setPeople(1);
   };
 
+  // ui will update everytime bill or tip is changed
   useEffect(() => {
     let newTotal = Number(bill) + Number(tip);
     setTotal(newTotal);
@@ -46,8 +47,18 @@ const Calculator = () => {
       </div>
       <div className="values">
         <div className="values-container">
-          <Display label="Tip Amount" amount={tip} people={people} />
-          <Display label="Total" amount={total} people={people} />
+          <Display
+            name="tip-container"
+            label="Tip Amount"
+            amount={tip}
+            people={people}
+          />
+          <Display
+            name="total-container"
+            label="Total"
+            amount={total}
+            people={people}
+          />
         </div>
         <div className="reset-button-container">
           <Button mode="reset" name="RESET" onClick={resetButtonHandler} />

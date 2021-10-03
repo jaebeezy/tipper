@@ -24,9 +24,12 @@ h6 {
   margin: 0;
 }
 
-.amount-container {
+.total-container {
   overflow: scroll;
   max-width: 230px;
 }
 
-// 240px, make font size 2rem?
+.tip-container {
+  overflow: scroll;
+  max-width: 200px;
+}

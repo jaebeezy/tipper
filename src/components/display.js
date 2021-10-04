@@ -11,8 +11,9 @@ const Display = ({ name, label, amount, people }) => {
       </div>
       <div className={name}>
         <h1 className="amount-header">
-          {amount ? `$${round(amount / people)}` : "$0.00"}
+          {amount ? `$${round(amount)}` : "$0.00"}
         </h1>
+        <h3>/ {amount ? `$${round(amount / people)}` : "$0.00"}</h3>
       </div>
     </div>
   );

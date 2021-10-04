@@ -60,6 +60,7 @@ const TipSelector = ({ bill, setTip }) => {
                   type="text"
                   onChange={(e) => setTip(e.target.value)}
                   min="0"
+                  autoFocus
                 />
               </div>
             ) : (

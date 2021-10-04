@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Button from "./button";
 
-const TipSelector = ({ bill, setTip }) => {
-  const [showCustom, setShowCustom] = useState(false);
-
+const TipSelector = ({ bill, setTip, showCustom, setShowCustom }) => {
   // handler function to calculate tip amount from bill
   const buttonClickHandler = (e) => {
     let tipAmount = bill * e.target.value;

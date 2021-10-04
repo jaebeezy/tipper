@@ -12,12 +12,14 @@ const Calculator = () => {
   const [people, setPeople] = useState(1);
   const [total, setTotal] = useState(0);
   const [tip, setTip] = useState(0);
+  const [showCustom, setShowCustom] = useState(false);
 
   // event handler for reset button
   const resetButtonHandler = () => {
     setBill("");
     setTip(0);
     setPeople(1);
+    setShowCustom(false);
   };
 
   // ui will update everytime bill or tip is changed
@@ -36,7 +38,12 @@ const Calculator = () => {
           value={bill || ""}
           onChange={setBill}
         />
-        <TipSelector bill={bill} setTip={setTip} />
+        <TipSelector
+          bill={bill}
+          setTip={setTip}
+          showCustom={showCustom}
+          setShowCustom={setShowCustom}
+        />
         <InputBar
           mode="people-input"
           label="Number of People"
@@ -65,7 +72,7 @@ const Calculator = () => {
             mode="reset"
             name="RESET"
             onClick={resetButtonHandler}
-            disabled={!bill && people === 1 ? true : false}
+            disabled={!bill && people === 1 && !showCustom ? true : false}
           />
         </div>
       </div>

@@ -48,6 +48,10 @@ button:hover {
   background-color: $buttonHoverGreen;
 }
 
+button:active {
+  transform: scale(0.97);
+}
+
 .toggle-box {
   position: relative;
   width: 105px;

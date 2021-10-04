@@ -47,3 +47,11 @@ button {
 button:hover {
   background-color: $buttonHoverGreen;
 }
+
+.toggle-box {
+  position: relative;
+  width: 105px;
+  margin: 0px;
+  padding: 0px;
+  height: 42.5px;
+}

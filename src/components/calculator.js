@@ -33,7 +33,7 @@ const Calculator = () => {
           mode="bill-input"
           label="Bill"
           type="text"
-          value={bill}
+          value={bill || ""}
           onChange={setBill}
         />
         <TipSelector bill={bill} setTip={setTip} />

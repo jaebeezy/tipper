@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Button from "./button";
 
 const TipSelector = ({ bill, setTip }) => {
+  const [showCustom, setShowCustom] = useState(false);
+
   // handler function to calculate tip amount from bill
   const buttonClickHandler = (e) => {
     let tipAmount = bill * e.target.value;
     setTip(tipAmount);
+    setShowCustom(false);
   };
 
   return (
@@ -46,7 +49,23 @@ const TipSelector = ({ bill, setTip }) => {
             value={0.25}
             onClick={(e) => buttonClickHandler(e)}
           />
-          <Button mode="secondary" name="Custom" />
+          <div
+            className="custom-button-container"
+            onClick={() => setShowCustom(true)}
+          >
+            {showCustom ? (
+              <div className="toggle-box">
+                <input
+                  className="custom-input"
+                  type="text"
+                  onChange={(e) => setTip(e.target.value)}
+                  min="0"
+                />
+              </div>
+            ) : (
+              <Button mode="secondary" name="Custom" />
+            )}
+          </div>
         </div>
       </div>
     </div>

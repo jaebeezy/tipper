@@ -40,3 +40,9 @@ h3 {
   overflow: scroll;
   max-width: 200px;
 }
+
+@media screen and (max-width: 320px) {
+  .display-container {
+    flex-direction: column;
+  }
+}

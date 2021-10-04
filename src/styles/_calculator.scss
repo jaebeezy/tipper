@@ -9,17 +9,35 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+@media screen and (max-width: 849px) {
+  .calculator-container {
+    flex-direction: column;
+    height: 800px;
+    width: 100vw;
+    border-radius: 0px;
+  }
+}
+
 .values-container {
   margin-top: 10px;
 }
 
 .entry,
 .values {
-  width: 41%;
-  height: 82%;
+  width: 348.5px;
+  height: 393.6px;
   border-radius: 16px;
   margin: 10px;
   padding: 10px;
+}
+
+@media screen and (max-width: 320px) {
+  .entry,
+  .values {
+    width: 200px;
+    margin: 0px;
+    padding: 0px;
+  }
 }
 
 .values {

@@ -21,6 +21,16 @@ body {
   height: 100vh;
 }
 
+@media screen and (max-width: 450px) {
+  .main-container {
+    height: 100%;
+  }
+
+  a {
+    padding-bottom: 10px;
+  }
+}
+
 @import "./calculator";
 @import "./inputbar";
 @import "./display";
